@@ -452,6 +452,14 @@ model WorkflowReminder {
   workflowStepId Int
 }
 
+model Lead {
+  createdAt DateTime @default(now())
+  firstName String?
+  id        String   @id @default(cuid())
+  lAstName  String?
+  updatedAt DateTime @updatedAt
+}
+
 enum EnumEventTypePeriodType {
   UNLIMITED
   ROLLING
